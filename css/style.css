@@ -1,0 +1,68 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateOnHover {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+ul,
+h1,
+.spashScreen,
+.gameDiv {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.dialog {
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+li img {
+  display: block;
+  width: 250px;
+  border-radius: 10px;
+}
+
+li img:hover {
+  animation: 0.5s ease-in 0s 1 rotateOnHover;
+}
+
+.splashScreen {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  top: 0px;
+  opacity: 1;
+}
+
+.oppSelectDiv {
+  animation: 0.5s ease-in-out 0s 1 slideInFromLeft;
+}
+
+.scroll_out {
+  top: -600px;
+  opacity: 0;
+  display: none;
+}
+
+.gameDiv {
+  background-color: green;
+}

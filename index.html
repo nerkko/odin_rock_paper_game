@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Rock, Paper, Paw Game</title>
+  </head>
+  <body>
+    <h1>Rock, Paper, Paw</h1>
+    <div class="splashScreen">
+      <div class="oppSelectDiv">
+        <ul>
+          <li>
+            <a href="#" id="oppCat0" onClick="pickOpponent(this.id)"
+              ><img
+                src="/images/oppCat1.png"
+                alt="An image of a cute cat. This is cat No1"
+            /></a>
+          </li>
+          <li>
+            <a href="#" id="oppCat1" onClick="pickOpponent(this.id)"
+              ><img
+                src="/images/oppCat2.jpg"
+                alt="An image of a cute cat. This is cat No2"
+            /></a>
+          </li>
+          <li>
+            <a href="#" id="oppCat2" onClick="pickOpponent(this.id)"
+              ><img
+                src="/images/oppCat3.jpg"
+                alt="An image of a cute cat. This is cat No3"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="dialog"></div>
+    </div>
+    <div class="gameDiv">
+      <label for="select-item">Select your choice:</label>
+      <select
+        name="selection"
+        id="select-item"
+        onClick="sendChoice(this.value, this[this.selectedIndex].text)"
+      >
+        <option value="2">Paper</option>
+        <option value="3">Scissors</option>
+        <option value="5">Rock</option>
+      </select>
+      <p class="param"></p>
+    </div>
+  </body>
+  <script type="text/javascript" src="/script/script.js"></script>
+</html>
